@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from "react-redux";
-
+import {Link} from 'react-router-dom'
 
 
 const Todo = (props) => {
@@ -10,7 +10,7 @@ const Todo = (props) => {
       return todoList.map((todo,i)=>(
         <div>
           <li key={i}>
-          <span>{todo.name}</span>
+          <Link to={"/additem/"+i}>{todo.name}</Link>
           <span><i class="fa fa-star" aria-hidden="true"style ={{color:"white"}}></i></span>
           <span><i class="fa fa-trash" aria-hidden="true"></i></span>
           </li>
