@@ -11,7 +11,6 @@ const Todo = (props) => {
         <div>
           <li key={i}>
           <span>{todo.name}</span>
-          <span><i class="fa fa-arrow-circle-down" aria-hidden="true"></i></span>
           <span><i class="fa fa-star" aria-hidden="true"style ={{color:"red"}}></i></span>
           <span><i class="fa fa-trash" aria-hidden="true"></i></span>
           </li>
