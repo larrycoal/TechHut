@@ -1,38 +1,95 @@
-.App {
-  text-align: center;
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html,body,#root{
+    min-height: 100vh;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.home-wrapper{
+    display: grid;
+    grid-template-areas: 
+    "list header header"
+    "list home home"
+    "list home home";
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.home{
+    grid-area: home;
 }
-
-.App-link {
-  color: #61dafb;
+nav{
+    grid-area: header;
+    padding: 20px 10px;
+    background-color: rgb(195, 236, 236);
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.create-todo-wrapper{
+    grid-area: list;
+    height: 100vh;
+    width: fit-content;
+    background: #584f4f;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.create-todo-wrapper h2{
+    text-align: center;
+}
+form{
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    gap:20px;
+    padding: 20px 0px;
+}
+input[type="text"]{
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    font-size: 15px;
+}
+button{
+    padding: 10px;
+    background-color: rgb(95, 95, 240);
+    color: white;
+    font-size: large;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+}
+.error{
+    color: red;
+    font-size: small;
+    margin: 0 auto;
+}
+.todo-wrapper{
+   flex-grow: 1;
+}
+.todo-wrapper h3{
+    padding: 10px;
+    font-size: xx-large;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+}
+.todo-wrapper ul{
+    list-style: none;
+    padding: 10px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.todoList li{
+   display: flex;
+    border-bottom: 1px solid rgb(172, 167, 167);
+    cursor: pointer;
+    width: 250px;
+    justify-items: center;
+}
+.todoList li span{
+    padding: 10px;
+}
+i{
+    cursor: pointer;
 }
